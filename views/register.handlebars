@@ -1,0 +1,27 @@
+<h2>Please type your info in the things.</h2>
+
+{{#if error}}
+    <div class="error">{{error}}</div>
+{{/if}}
+
+<form action="/register" method="POST">
+    
+    <label for="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname" value="{{firstname}}">
+
+    <label for="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname" value="{{lastname}}">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <input class="button button2" type="submit" value="Register">
+
+</form>
+
+<p>"I am big enough to admit that I am often inspired by myself." <br><i>(Leslie Knope)</i></p>

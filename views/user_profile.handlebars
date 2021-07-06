@@ -1,0 +1,44 @@
+<h2>Edit your profile</h2>
+
+{{#if error}}
+    <div class="error">{{error}}</div>
+{{/if}}
+
+{{#if message}}
+    <div class="message">{{message}}</div>
+{{/if}}
+
+
+<form method="post" action="/user_profile/edit">
+
+
+    <label for="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname" value="{{firstname}}">
+
+    <label for="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname" value="{{lastname}}">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="{{email}}">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+    <small>(Type in your new password)</small>
+
+    <label for="age">Age</label> 
+    <input type="number" name="age" id="age" value="{{age}}">
+
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" value="{{city}}">
+
+    <label for="homepage">Homepage</label>
+    <input type="text" name="homepage" id="homepage" value="{{homepage}}">
+    
+    
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <input class="button button2" type="submit" value="Save changes">
+
+</form>
+
+<p>(No, you can't delete your signature. Every vote counts.)</p>

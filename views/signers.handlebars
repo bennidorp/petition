@@ -1,0 +1,19 @@
+<h2>Every vote counts</h2>
+
+<ol>
+    {{#each signers}}
+
+        <li>
+            {{firstname}} {{lastname}}, {{age}} years old from {{city}}.
+            {{#if homepage}}
+                <a href="{{homepage}}">Visit {{firstname}}'s homepage</a>
+            {{/if}}
+        </li>
+
+    {{/each}}
+
+
+</ol>
+
+
+<p> "So what I hear when I'm being yelled at is people caring loudly at me." <br><i>(Leslie Knope)</i></p>

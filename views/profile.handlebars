@@ -1,0 +1,22 @@
+<h2>Please type some more info in more things.</h2>
+
+{{#if error}}
+    <div class="error">{{error}}</div>
+{{/if}}
+
+<form method="POST" action="/profile">
+    <label for="age">Age</label> 
+    <input type="number" name="age" id="age" value="{{age}}">
+
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" value="{{city}}">
+
+    <label for="homepage">Homepage</label>
+    <input type="text" name="homepage" id="homepage" value="{{homepage}}">
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <button class="button button2">Save profile</button>
+</form>
+
+<p>"I have the most valuable currency in America: A blind, stubborn belief that what I'm doing is 100% right." <br><i>(Leslie Knope)</i></p>

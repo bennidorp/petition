@@ -1,0 +1,33 @@
+<h2>Almost done. Only one little step left.</h2>
+<p>(OK, it's a pretty big step actually)</p>
+
+{{#if error}}
+    <div class="error">{{error}}</div>
+{{/if}}
+
+
+
+<form action="/sign
+" method="post">
+
+   {{! <label for="firstname">Firstname</label>
+    <input type="text" name="firstname" id="firstname">
+ 
+    <label for="lastname">Lastname</label>
+    <input type="text" name="lastname" id="lastname">
+     }}
+
+
+    <p>
+    <canvas id="signatureCanvas" width="500" height="120"></canvas>
+    <input type="hidden" name="signature_code" id="signatureCode">
+    </p>
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+    <button class="button button2">Sign petition</button>
+
+
+</form>
+
+<p>“There’s nothing we can’t do if we work hard, never sleep, and shirk all other responsibilities in our lives.” <br><i>(Leslie Knope)</i></p>
